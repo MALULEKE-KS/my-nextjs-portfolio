@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { ContactRequestSchema } from "@/types/contact";
+import { sendContactNotification } from "@/lib/email/sendContactNotification";
 
 function fieldErrorsFromZod(error: ZodError): Record<string, string[]> {
   const out: Record<string, string[]> = {};
@@ -40,11 +41,13 @@ export async function POST(req: Request) {
     );
   }
 
-  /**
-   * v1 delivery: Option A — validate and acknowledge (no external mailer).
-   * Replace with Resend/SendGrid/etc. using server env when ready.
-   */
-  void parsed.data;
+  const sendResult = await sendContactNotification(parsed.data);
+  if (!sendResult.ok) {
+    return NextResponse.json(
+      { success: false, message: sendResult.message },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({
     success: true,

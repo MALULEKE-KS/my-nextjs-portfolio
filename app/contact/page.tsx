@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageContainer from "@/components/layout/PageContainer";
 import ContactSection from "@/components/features/ContactSection";
 import ContactForm from "@/components/forms/ContactForm";
 import Card from "@/components/ui/Card";
 import { MessageCircle } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Reach out via validated form, email, LinkedIn, WhatsApp, or GitHub — optimized for hiring and collaboration threads."
+};
 
 export default function ContactPage() {
   return (
@@ -39,7 +46,9 @@ export default function ContactPage() {
             Message
           </h2>
           <p className="mt-2 text-sm text-slate-400">
-            Validated on submit. For sensitive threads, email still works best.
+            Validated on submit. When email delivery is configured on the server,
+            you get a copy in the inbox; otherwise the form still validates and
+            acknowledges. For sensitive threads, direct email works best.
           </p>
           <div className="mt-6">
             <ContactForm />

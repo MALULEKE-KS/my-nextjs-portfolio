@@ -6,15 +6,16 @@ import {
   lucideFromConfig,
   statusLucideIcon
 } from "@/lib/utils/lucide-from-config";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Network } from "lucide-react";
 
 export default async function FlagshipCatalog() {
   const { systems } = await fetchFlagshipSystems();
   const active = systems.filter((s) => s.status === "active-development").length;
+  const withDiagram = systems.filter((s) => s.architectureDiagramSrc).length;
 
   return (
     <>
-      <div className="mb-10 grid gap-4 sm:grid-cols-3">
+      <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card className="border-slate-800/90 p-5">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
             CATALOG_SIZE
@@ -32,6 +33,17 @@ export default async function FlagshipCatalog() {
             {active}
           </p>
           <p className="mt-1 text-xs text-slate-500">in active development</p>
+        </Card>
+        <Card className="border-slate-800/90 p-5">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+            DEEP_EVIDENCE
+          </p>
+          <p className="mt-2 text-2xl font-semibold tabular-nums text-emerald-300/95">
+            {withDiagram}
+          </p>
+          <p className="mt-1 text-xs text-slate-500">
+            case studies with architecture diagrams
+          </p>
         </Card>
         <Card className="border-slate-800/90 p-5">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
@@ -86,6 +98,12 @@ export default async function FlagshipCatalog() {
                       <StatusIcon className="h-3 w-3" aria-hidden />
                       {system.status.replace(/-/g, "_")}
                     </span>
+                    {system.architectureDiagramSrc ? (
+                      <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-emerald-300/95">
+                        <Network className="h-3 w-3" aria-hidden />
+                        Diagram
+                      </span>
+                    ) : null}
                   </div>
                 </div>
               </Card>

@@ -6,7 +6,7 @@ import { loadMethodologyConfig } from "@/lib/config-loader";
 import { BookOpen, ChevronRight, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Methodology — Engineering Portfolio",
+  title: "Methodology",
   description:
     "MVP gates, sequential delivery, mobile-first standards, and how this portfolio is built."
 };

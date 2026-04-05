@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageContainer from "@/components/layout/PageContainer";
 import Card from "@/components/ui/Card";
@@ -16,6 +17,19 @@ type Params = {
 async function getSystem(id: string): Promise<FlagshipSystem | null> {
   const { systems } = await fetchFlagshipSystems();
   return systems.find((s) => s.id === id) ?? null;
+}
+
+export async function generateMetadata({
+  params
+}: Params): Promise<Metadata> {
+  const system = await getSystem(params.id);
+  if (!system) {
+    return { title: "System not found" };
+  }
+  return {
+    title: system.name,
+    description: system.shortDescription
+  };
 }
 
 export default async function FlagshipDetailPage({ params }: Params) {

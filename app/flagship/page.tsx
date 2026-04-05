@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import PageContainer from "@/components/layout/PageContainer";
@@ -6,6 +7,12 @@ import Skeleton from "@/components/ui/Skeleton";
 import FlagshipCatalog from "@/components/features/FlagshipCatalog";
 import { loadThemeConfig } from "@/lib/config-loader";
 import { Layers, Sparkles } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Flagship systems",
+  description:
+    "Case studies for FundsLink Academy, Maphophe, KSDRILL Reserve Bank, SyncUp — problem, architecture, stack, and phase."
+};
 
 export default function FlagshipPage() {
   const { sections } = loadThemeConfig();
@@ -51,6 +58,16 @@ export default function FlagshipPage() {
                 description={copy.description}
                 className="max-w-2xl"
               />
+              <p className="max-w-xl text-xs leading-relaxed text-slate-500">
+                Prefer process over hype? See{" "}
+                <Link
+                  href="/methodology"
+                  className="font-medium text-blue-400/90 underline-offset-2 hover:text-blue-300 hover:underline"
+                >
+                  methodology
+                </Link>{" "}
+                for MVP gates and how these builds are sequenced.
+              </p>
             </div>
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-slate-700/90 bg-slate-900/60 text-blue-400">
               <Layers className="h-8 w-8" aria-hidden />

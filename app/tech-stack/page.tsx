@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageContainer from "@/components/layout/PageContainer";
 import SectionHeader from "@/components/ui/SectionHeader";
 import TechStackSection from "@/components/features/TechStackSection";
 import { loadThemeConfig } from "@/lib/config-loader";
 import { Code2 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Tech stack",
+  description:
+    "Frontend, API, data, AI, and delivery tools — grouped by layer for technical reviewers."
+};
 
 export default function TechStackPage() {
   const { sections } = loadThemeConfig();
