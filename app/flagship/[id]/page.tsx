@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageContainer from "@/components/layout/PageContainer";
 import Card from "@/components/ui/Card";
@@ -154,7 +155,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
           {system.architectureDiagramSrc ? (
             <figure className="mt-8 space-y-3">
               <div className="overflow-hidden rounded-xl border border-slate-800/90 bg-slate-950/80">
-                <img
+                <Image
                   src={system.architectureDiagramSrc}
                   alt={
                     system.architectureDiagramCaption ??
@@ -164,6 +165,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
                   width={920}
                   height={420}
                   loading="lazy"
+                  unoptimized
                 />
               </div>
               {system.architectureDiagramCaption ? (
