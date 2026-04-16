@@ -11,7 +11,7 @@ const siteUrl =
 
 const defaultTitle = "Maluleke Kurhula Success – Engineering Portfolio";
 const defaultDescription =
-  "Software Engineer and AI Systems Architect building scalable platforms across SaaS, fintech, AI, and enterprise.";
+  "Software Engineer and AI Integrator building scalable, production-grade platforms across fintech, healthcare, enterprise, and AI. BSc Computer Science & Mathematics — North-West University.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,16 +26,21 @@ export const metadata: Metadata = {
     siteName: defaultTitle,
     title: defaultTitle,
     description: defaultDescription,
-    url: siteUrl
+    url: siteUrl,
+    images: ["/images/og-image_1.png"]
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
-    description: defaultDescription
+    description: defaultDescription,
+    images: ["/images/og-image_1.png"]
   },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+  },
+  other: {
+    "og:image": "/images/og-image_1.png"
   }
 };
 
