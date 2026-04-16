@@ -59,10 +59,6 @@ export default function Header() {
               </Link>
             );
           })}
-          <Link href="/contact" className="hdr-nav-cta">
-            <Mail className="h-3.5 w-3.5" aria-hidden />
-            Contact
-          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -94,10 +90,6 @@ export default function Header() {
                 </Link>
               );
             })}
-            <Link href="/contact" className="hdr-nav-cta mt-1" onClick={() => setMobileOpen(false)}>
-              <Mail className="h-4 w-4" aria-hidden />
-              Contact
-            </Link>
           </nav>
         </div>
       )}
