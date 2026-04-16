@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import BackgroundImage from "@/components/ui/BackgroundImage";
 import { loadThemeConfig } from "@/lib/config-loader";
 import { fetchProfile } from "@/lib/api/portfolio";
-import ProfilePortrait from "@/components/ui/ProfilePortrait";
 
 async function HeroContent() {
   const profile = await fetchProfile();
@@ -82,20 +82,14 @@ async function HeroContent() {
             <div className="hero-portrait-ring" aria-hidden="true" />
             <div className="hero-portrait-glow" aria-hidden="true" />
             <div className="hero-portrait-ambient" aria-hidden="true" />
-            <figure
-              className={cn(
-                "relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-slate-700/85 bg-slate-900 shadow-glow-sm ring-1 ring-blue-500/15 motion-safe-hover-lift md:mx-0",
-                "aspect-[4/5]",
-                "hero-portrait md:max-w-[280px] lg:max-w-[300px]"
-              )}
-            >
+            <figure className="hero-portrait relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-slate-700/85 bg-slate-900 shadow-glow-sm ring-1 ring-blue-500/15 motion-safe-hover-lift aspect-[4/5] md:mx-0 md:max-w-[280px] lg:max-w-[300px]">
               <Image
                 src={profile.portraitSrc}
                 alt={profile.portraitAlt ?? profile.name}
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 768px) min(280px, 100vw), 280px"
-                priority={priority}
+                priority={true}
               />
             </figure>
           </div>
