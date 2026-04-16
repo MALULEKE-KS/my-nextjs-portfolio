@@ -21,7 +21,7 @@ export const ProfileSchema = z.object({
   location: z.string(),
   openToWork: z.boolean().default(false),
   openToWorkLabel: z.string().default("Open to work"),
-  companies: z.array(
+  organizations: z.array(
     z.object({
       name: z.string(),
       role: z.string(),

@@ -13,10 +13,10 @@
   "location": "Based in South Africa · Available for remote work globally",
   "openToWork": true,
   "openToWorkLabel": "Open to work",
-  "companies": [
+  "organizations": [
     {
-      "name": "KSDRILL SA",
-      "role": "Founder",
+      "name": "Maluleke Kurhula Success",
+      "role": "Founder & Developer",
       "periodLabel": "Ongoing",
       "description": "Technology studio demonstrating full-stack engineering, AI integration, and production deployment across multiple industries. Focus areas: AI systems, fintech, SaaS, enterprise automation."
     },

@@ -50,7 +50,7 @@ export default async function WhoIAmSection() {
             ORGS
           </p>
           <div className="space-y-3">
-            {profile.companies.map((c) => (
+            {profile.organizations.map((c) => (
               <Card
                 key={c.name}
                 className="p-4 transition-colors hover:border-slate-700"
