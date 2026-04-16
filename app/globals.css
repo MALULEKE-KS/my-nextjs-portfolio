@@ -192,3 +192,214 @@
   .hero-scanline,
   .open-to-work-pulse::before { animation: none; }
 }
+
+/* ─── Hero ─── */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--obs-bg);
+}
+
+/* Background image — right-anchored, limited width */
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Content sits on top, left-aligned */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Bottom warm fade to merge with page */
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--obs-bg));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left ambient gradient to soften image overlap with text */
+.hero-left-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(to right, var(--obs-bg) 60%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Portrait styling — professional framing */
+.hero-portrait-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-portrait-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--obs-accent) 0%, transparent 50%, var(--obs-amber) 100%);
+  opacity: 0.15;
+}
+
+.hero-portrait-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 1.5rem;
+  background: radial-gradient(ellipse at 30% 30%, rgba(200, 16, 46, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+/* Trust strip — warm border on warm bg */
+.trust-strip {
+  border-top: 1px solid var(--obs-border);
+  border-bottom: 1px solid var(--obs-border);
+  background: rgba(240, 237, 232, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.trust-strip-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 0;
+  min-height: 52px;
+  justify-content: center;
+}
+
+.trust-strip-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--obs-text-muted);
+}
+
+.trust-strip-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--obs-text-primary);
+  line-height: 1.3;
+}
+
+/* Primary CTA button — obsidian on warm */
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 8px;
+  background: var(--obs-text-primary);
+  color: var(--obs-bg);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow: 0 4px 16px rgba(26, 24, 20, 0.12), 0 1px 2px rgba(26, 24, 20, 0.08);
+  transition: all 180ms ease-out;
+}
+
+.hero-cta-primary:hover {
+  background: var(--obs-accent);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(200, 16, 46, 0.2), 0 2px 4px rgba(200, 16, 46, 0.1);
+  transform: translateY(-1px);
+}
+
+.hero-cta-primary:focus-visible {
+  outline: 2px solid var(--obs-accent);
+  outline-offset: 2px;
+}
+
+/* Secondary CTA */
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 8px;
+  border: 1.5px solid var(--obs-border-hover);
+  background: transparent;
+  color: var(--obs-text-primary);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all 180ms ease-out;
+}
+
+.hero-cta-secondary:hover {
+  border-color: var(--obs-text-muted);
+  background: var(--obs-surface);
+}
+
+/* Hero name — large editorial display */
+.hero-name {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--obs-text-primary);
+  font-family: var(--font-sans, system-ui);
+}
+
+/* Hero kicker — small mono label */
+.hero-kicker {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--obs-accent);
+  font-weight: 500;
+}
+
+/* Accent line under headline */
+.hero-accent-line {
+  width: 40px;
+  height: 3px;
+  background: var(--obs-accent);
+  border-radius: 2px;
+}
+
+/* Metric card */
+.hero-metric-card {
+  border: 1px solid var(--obs-border-hover);
+  background: var(--obs-surface);
+  border-radius: 12px;
+  padding: 14px 18px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-metric-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--obs-text-muted);
+}
+
+.hero-metric-value {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--obs-text-primary);
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}

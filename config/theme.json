@@ -149,16 +149,16 @@
   },
   "hero": {
     "backgroundImage": {
-      "desktop": "/images/hero-desktop.svg",
+      "desktop": "/images/hero-desktop-new.png",
       "mobile": "/images/hero-mobile.svg",
-      "fallback": "/images/hero-fallback.svg"
+      "fallback": "/images/hero-desktop-new.png"
     },
-    "backgroundAlt": "Deep obsidian geometric pattern",
-    "backgroundSize": "cover",
-    "backgroundPosition": "center",
+    "backgroundAlt": "Maluleke Kurhula Success — Software Engineer & AI Integrator",
+    "backgroundSize": "65% auto",
+    "backgroundPosition": "95% center",
     "overlay": {
       "color": "#FAF8F5",
-      "opacity": 0.85,
+      "opacity": 0,
       "blur": false
     }
   },
