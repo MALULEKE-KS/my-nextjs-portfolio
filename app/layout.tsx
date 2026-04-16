@@ -1,18 +1,20 @@
 import "./globals.css";
+import "./page.css";
+import "./teasers.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Providers from "@/app/providers";
-import { fontMono, fontSans } from "@/app/fonts";
 import BackToTop from "@/components/ui/BackToTop";
+import { fontMono, fontSans } from "@/app/fonts";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_APP_URL ?? "https://ksdrill-portfolio.vercel.app";
 
 const defaultTitle = "Maluleke Kurhula Success – Engineering Portfolio";
 const defaultDescription =
-  "Software Engineer and AI Integrator building scalable, production-grade platforms across fintech, healthcare, enterprise, and AI. BSc Computer Science & Mathematics — North-West University.";
+  "Software Engineer and AI Integrator building production-grade digital systems across fintech, healthcare, enterprise, and AI.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,6 +23,10 @@ export const metadata: Metadata = {
     template: "%s · Portfolio"
   },
   description: defaultDescription,
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg"
+  },
   openGraph: {
     type: "website",
     locale: "en_ZA",
@@ -28,20 +34,19 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
     url: siteUrl,
-    images: ["/images/og-image_1.png"]
+    images: [
+      {
+        url: "/images/og-image_1.png",
+        width: 1200,
+        height: 800,
+        alt: "Maluleke Kurhula Success – Engineering Portfolio"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
-    description: defaultDescription,
-    images: ["/images/og-image_1.png"]
-  },
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-  },
-  other: {
-    "og:image": "/images/og-image_1.png"
+    description: defaultDescription
   }
 };
 
@@ -61,4 +66,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
-
