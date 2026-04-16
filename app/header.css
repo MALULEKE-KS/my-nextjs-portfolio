@@ -74,7 +74,7 @@
 .hdr-name {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #F1F5F9;
+  color: #292524;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -155,7 +155,7 @@
 }
 
 .hdr-nav-link:hover {
-  color: #E2E8F0;
+  color: #44403C;
   background: rgba(255, 255, 255, 0.04);
 }
 
@@ -166,7 +166,7 @@
 
 /* Active link — accent underline */
 .hdr-nav-link.active {
-  color: #F1F5F9;
+  color: #292524;
 }
 
 .hdr-nav-link.active::after {
@@ -229,16 +229,16 @@
   min-width: 38px;
   min-height: 38px;
   border-radius: 8px;
-  border: 1px solid rgba(51, 65, 85, 0.6);
-  background: rgba(15, 23, 42, 0.6);
-  color: #94A3B8;
+  border: 1px solid rgba(161, 125, 90, 0.6);
+  background: rgba(255, 252, 248, 0.8);
+  color: #78716C;
   transition: all 0.15s ease-out;
 }
 
 .hdr-mobile-btn:hover {
   border-color: rgba(100, 116, 139, 0.8);
-  background: rgba(30, 41, 59, 0.6);
-  color: #E2E8F0;
+  background: rgba(255, 252, 248, 0.8);
+  color: #44403C;
 }
 
 .hdr-mobile-btn:focus-visible {

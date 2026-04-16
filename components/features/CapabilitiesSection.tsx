@@ -47,7 +47,7 @@ export default function CapabilitiesSection() {
       <div className="flex justify-start">
         <Link
           href={cap.stackHref}
-          className="motion-safe-transition inline-flex min-h-[44px] items-center rounded-lg border border-[#D4CFC4]/90 bg-[#FAF8F5]/40 px-5 py-2.5 text-sm font-semibold text-[#2D2923] backdrop-blur-sm hover:border-[#C4BFB4] hover:bg-[#F5F2ED]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          className="motion-safe-transition inline-flex min-h-[44px] items-center rounded-lg border border-[#D4CFC4]/90 bg-[#FAF8F5]/40 px-5 py-2.5 text-sm font-semibold text-[#2D2923] backdrop-blur-sm hover:border-[#C4BFB4] hover:bg-[#F5F2ED]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-950"
         >
           {cap.stackCtaLabel}
         </Link>

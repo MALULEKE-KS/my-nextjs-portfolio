@@ -77,7 +77,7 @@ export default async function FeaturedFlagshipSection() {
             <div className="ffm-card-pillar">
               <div className="ffm-pillar-accent problem" aria-hidden />
               <div className="ffm-pillar-label">
-                <Target className="h-4 w-4 shrink-0 text-red-400" aria-hidden />
+                <Target className="h-4 w-4 shrink-0 text-red-600" aria-hidden />
                 <span className="ffm-pillar-label-text problem">Problem</span>
               </div>
               <p className="ffm-pillar-body">
@@ -103,7 +103,7 @@ export default async function FeaturedFlagshipSection() {
             <div className="ffm-card-pillar">
               <div className="ffm-pillar-accent impact" aria-hidden />
               <div className="ffm-pillar-label">
-                <TrendingUp className="h-4 w-4 shrink-0 text-emerald-400" aria-hidden />
+                <TrendingUp className="h-4 w-4 shrink-0 text-emerald-700" aria-hidden />
                 <span className="ffm-pillar-label-text impact">Impact</span>
               </div>
               <p className="ffm-pillar-body">

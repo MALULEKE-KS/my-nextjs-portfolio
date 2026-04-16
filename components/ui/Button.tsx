@@ -19,9 +19,9 @@ export default function Button(props: ButtonProps) {
     primary:
       "bg-[#C8102E] text-white hover:bg-[#C8102E] focus-visible:ring-[#C8102E]-500",
     secondary:
-      "bg-[#EDE9E3] text-[#2D2923] hover:bg-[#E4DFD7] focus-visible:ring-slate-500",
+      "bg-[#EDE9E3] text-[#2D2923] hover:bg-[#E4DFD7] focus-visible:ring-stone-500",
     ghost:
-      "bg-transparent text-[#2D2923] hover:bg-[#EDE9E3] focus-visible:ring-slate-500"
+      "bg-transparent text-[#2D2923] hover:bg-[#EDE9E3] focus-visible:ring-stone-500"
   };
 
   const sizes: Record<Size, string> = {

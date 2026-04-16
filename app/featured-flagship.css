@@ -9,9 +9,9 @@
   border: 1px solid rgba(37, 99, 235, 0.25);
   background: linear-gradient(
     135deg,
-    rgba(15, 23, 42, 0.98) 0%,
-    rgba(30, 41, 59, 0.95) 50%,
-    rgba(15, 23, 42, 0.98) 100%
+    rgba(255, 252, 248, 0.96) 0%,
+    rgba(255, 252, 248, 0.96) 50%,
+    rgba(255, 252, 248, 0.96) 100%
   );
   backdrop-filter: blur(12px);
 }
@@ -77,14 +77,14 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  border-right: 1px solid rgba(51, 65, 85, 0.5);
+  border-right: 1px solid rgba(161, 125, 90, 0.5);
 }
 
 @media (max-width: 900px) {
   .ffm-left {
     padding: 2.5rem 2rem;
     border-right: none;
-    border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    border-bottom: 1px solid rgba(161, 125, 90, 0.5);
   }
 }
 
@@ -125,8 +125,8 @@
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  color: #F9FAFB;
-  background: linear-gradient(135deg, #F9FAFB 0%, #CBD5E1 60%, #94A3B8 100%);
+  color: #1C1917;
+  background: linear-gradient(135deg, #1C1917 0%, #57534E 60%, #78716C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -166,12 +166,12 @@
   gap: 6px;
   border-radius: 9999px;
   border: 1px solid rgba(71, 85, 105, 0.6);
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(255, 252, 248, 0.8);
   padding: 4px 12px;
   font-family: ui-monospace, monospace;
   font-size: 11px;
   font-weight: 500;
-  color: #94A3B8;
+  color: #78716C;
 }
 
 .ffm-status-dot {
@@ -200,8 +200,8 @@
 .ffm-card-pillar {
   position: relative;
   border-radius: 0.875rem;
-  border: 1px solid rgba(51, 65, 85, 0.6);
-  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(161, 125, 90, 0.6);
+  background: rgba(255, 252, 248, 0.8);
   padding: 1.25rem 1.5rem;
   overflow: hidden;
   transition: all 0.2s ease;
@@ -210,7 +210,7 @@
 .ffm-card-pillar:hover {
   border-color: rgba(37, 99, 235, 0.3);
   transform: translateY(-1px);
-  background: rgba(30, 41, 59, 0.5);
+  background: rgba(255, 252, 248, 0.75);
 }
 
 .ffm-card-pillar::before {
@@ -282,7 +282,7 @@
 /* CTA */
 .ffm-cta-wrap {
   padding: 1.75rem 3rem 2rem;
-  border-top: 1px solid rgba(51, 65, 85, 0.4);
+  border-top: 1px solid rgba(161, 125, 90, 0.4);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -306,7 +306,7 @@
 .ffm-cta-headline {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #F1F5F9;
+  color: #292524;
 }
 
 .ffm-cta-sub {
@@ -382,12 +382,12 @@
 }
 
 .ffm-secondary-link:hover {
-  color: #94A3B8;
+  color: #78716C;
 }
 
 .ffm-secondary-link:focus-visible {
   outline: none;
-  color: #94A3B8;
+  color: #78716C;
 }
 
 /* Bottom edge glow line */
