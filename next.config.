@@ -1,0 +1,5 @@
+/** @type {import('next').}    "compiler": {
+      "removeConsole": false
+    }
+  },
+  transpilePackages: ["@tsparticu

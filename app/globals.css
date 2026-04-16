@@ -1,12 +1,194 @@
-.root {
-  --obs-black: #FAF8F5;
-  --obs-white: #1A1814;
-  --obs-muted: #6B645A;
-  --obs-accent: #C8102E;
-  --obs-amber: #D4A017;
-  --obs-border: rgba(26, 24, 20, 0.1);
-  --obs-border-hover: rgba(26, 24, 20, 0.22);
-  --obs-surface: rgba(26, 24, 20, 0.04);
-  --obs-surface-hover: rgba(26, 24, 20, 0.08);
-  --obs-glow: rgba(200, 16, 46, 0.1);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-obsm-warm-bg font-sans text-obsm-text-primary antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  *,
+  *::before,
+  *::after {
+    border-color: var(--obs-border);
+  }
+}
+
+@layer utilities {
+  /* ─── Warm White Design Tokens ─── */
+  .bg-obsm-warm-bg   { background-color: #FAF8F5; }
+  .bg-obsm-surface   { background-color: var(--obs-surface); }
+  .bg-obsm-surface-h { background-color: var(--obs-surface-hover); }
+  .bg-obsm-dark      { background-color: var(--obs-white); }
+  .text-obsm-text-primary   { color: var(--obs-white); }
+  .text-obsm-text-secondary { color: var(--obs-muted); }
+  .text-obsm-accent        { color: var(--obs-accent); }
+  .text-obsm-amber         { color: var(--obs-amber); }
+  .border-obsm             { border-color: var(--obs-border); }
+  .border-obsm-hover       { border-color: var(--obs-border-hover); }
+
+  /* ─── Ambient grid ─── */
+  .home-ambient-grid {
+    background-size: 56px 56px;
+    background-image:
+      linear-gradient(to right, rgba(107,100,90,0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(107,100,90,0.07) 1px, transparent 1px);
+    mask-image: radial-gradient(
+      ellipse 75% 65% at 50% 0%,
+      black 15%,
+      transparent 70%
+    );
+  }
+
+  /* ─── Hero mesh gradient ─── */
+  .hero-mesh {
+    background:
+      radial-gradient(ellipse 120% 80% at 20% -10%, rgba(200,16,46,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 90% 60% at 85% 15%,  rgba(212,160,23,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgba(26,24,20,0.05) 0%, transparent 55%);
+  }
+
+  /* ─── Amber scan line ─── */
+  .hero-scanline {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(200,16,46,0.55) 50%, transparent 100%);
+    animation: heroScanline 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* ─── Motion safe transitions ─── */
+  .motion-safe-transition {
+    @apply motion-safe:transition motion-safe:duration-180 motion-safe:ease-out;
+  }
+  .motion-safe-hover-lift {
+    @apply motion-safe:transition motion-safe:duration-180 motion-safe:ease-out motion-safe:hover:-translate-y-0.5;
+  }
+
+  /* ─── Work experience timeline ─── */
+  .exp-timeline-glow {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(200,16,46,0.7) 30%, rgba(212,160,23,0.5) 60%, transparent 100%);
+    filter: blur(0.5px);
+  }
+  .exp-timeline-line {
+    position: absolute;
+    left: 28px; top: 60px; bottom: 40px;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(200,16,46,0.5) 0%, rgba(212,160,23,0.2) 60%, transparent 100%);
+  }
+  .exp-highlight-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C8102E 0%, #E83550 100%);
+    box-shadow: 0 0 8px rgba(200,16,46,0.5);
+  }
+
+  /* ─── Education card ─── */
+  .edu-card { position: relative; overflow: hidden; }
+  .edu-glow {
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,160,23,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(20px);
+  }
+  .edu-content { position: relative; z-index: 1; }
+
+  /* ─── Live work cards ─── */
+  .live-work-card { position: relative; overflow: hidden; }
+  .live-work-glow {
+    position: absolute;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,16,46,0.15) 0%, transparent 70%);
+    pointer-events: none;
+    filter: blur(24px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .live-work-card:hover .live-work-glow { opacity: 1; }
+  .live-work-card-inner { position: relative; z-index: 1; }
+  .live-work-icon {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(200,16,46,0.25);
+    background: rgba(200,16,46,0.06);
+    color: rgba(200,16,46,0.85);
+  }
+  .live-work-arrow {
+    color: rgba(107,100,90,0.5);
+    transition: color 0.18s ease, transform 0.18s ease;
+  }
+  .live-work-card:hover .live-work-arrow {
+    color: var(--obs-accent);
+    transform: translate(2px,-2px);
+  }
+  .live-work-url {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    color: rgba(107,100,90,0.6);
+    letter-spacing: 0.02em;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ─── Industry card ─── */
+  .industry-card-glow { position: relative; overflow: hidden; }
+  .industry-card-glow::before {
+    content: "";
+    position: absolute;
+    bottom: -20px; left: 50%;
+    transform: translateX(-50%);
+    width: 80%; height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(200,16,46,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .industry-card-glow:hover::before { opacity: 1; }
+
+  /* ─── Open to work badge ─── */
+  .open-to-work-pulse { position: relative; }
+  .open-to-work-pulse::before {
+    content: "";
+    position: absolute; inset: -2px;
+    border-radius: inherit;
+    background: inherit;
+    filter: blur(8px);
+    opacity: 0.5;
+    animation: openWorkPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes heroScanline {
+  0%   { top: 0%; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes openWorkPulse {
+  0%,100% { opacity: 0.3; transform: scale(1); }
+  50%     { opacity: 0.6; transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-scanline,
+  .open-to-work-pulse::before { animation: none; }
 }
