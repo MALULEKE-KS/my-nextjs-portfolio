@@ -17,20 +17,20 @@ export default function HomeNarrativeSection() {
           title={narrative.title}
           className="max-w-2xl"
         />
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-700/90 bg-slate-900/60 text-blue-400 md:h-16 md:w-16">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#E4DFD7]/90 bg-[#F5F2ED]/60 text-[#C8102E] md:h-16 md:w-16">
           <NarrativeIcon className="h-7 w-7 md:h-8 md:w-8" aria-hidden />
         </div>
       </div>
-      <Card className="relative overflow-hidden border-slate-800/80">
+      <Card className="relative overflow-hidden border-[#EDE9E3]/80">
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-12 top-0 h-36 w-36 rounded-full bg-blue-600/10 blur-3xl"
+          className="pointer-events-none absolute -right-12 top-0 h-36 w-36 rounded-full bg-[#C8102E]/10 blur-3xl"
         />
         <div className="relative space-y-5">
           {narrative.paragraphs.map((p, i) => (
             <p
               key={i}
-              className="text-sm leading-relaxed text-slate-300 md:text-[15px]"
+              className="text-sm leading-relaxed text-[#6B645A] md:text-[15px]"
             >
               {p}
             </p>

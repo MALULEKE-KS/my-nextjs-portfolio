@@ -39,11 +39,11 @@ export default async function FlagshipDetailPage({ params }: Params) {
   if (!system) {
     return (
       <PageContainer>
-        <Card className="border-slate-800/90">
-          <p className="text-sm text-slate-300">System not found.</p>
+        <Card className="border-[#EDE9E3]/90">
+          <p className="text-sm text-[#6B645A]">System not found.</p>
           <Link
             href="/flagship"
-            className="mt-4 inline-flex text-sm font-semibold text-blue-400 hover:text-blue-300"
+            className="mt-4 inline-flex text-sm font-semibold text-[#C8102E] hover:text-[#C8102E]"
           >
             Back to catalog
           </Link>
@@ -63,48 +63,48 @@ export default async function FlagshipDetailPage({ params }: Params) {
       />
       <article className="relative z-[1] space-y-10">
         <nav
-          className="flex flex-wrap items-center gap-1 text-xs text-slate-500"
+          className="flex flex-wrap items-center gap-1 text-xs text-[#1A1814]0"
           aria-label="Breadcrumb"
         >
           <Link
             href="/"
-            className="hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+            className="hover:text-[#6B645A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]-500/60"
           >
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5 text-slate-600" aria-hidden />
           <Link
             href="/flagship"
-            className="hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+            className="hover:text-[#6B645A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]-500/60"
           >
             Flagship
           </Link>
           <ChevronRight className="h-3.5 w-3.5 text-slate-600" aria-hidden />
-          <span className="font-mono text-slate-400">{system.id}</span>
+          <span className="font-mono text-[#6B645A]">{system.id}</span>
         </nav>
 
-        <header className="overflow-hidden rounded-2xl border border-slate-800/90 bg-gradient-to-br from-slate-950/90 via-slate-950/70 to-blue-950/20 p-8 shadow-glow-sm md:p-10">
+        <header className="overflow-hidden rounded-2xl border border-[#EDE9E3]/90 bg-gradient-to-br from-[#FAF8F5]/90 via-[#FAF8F5]/70 to-blue-950/20 p-8 shadow-[0_0_12px_rgba(200,16,46,0.12)] md:p-10">
           <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             <div className="flex flex-1 flex-col gap-5">
               <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-blue-500/35 bg-blue-500/15 text-blue-300">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#C8102E]/35 bg-[#C8102E]/15 text-[#C8102E]">
                   <SysIcon className="h-7 w-7" aria-hidden />
                 </div>
                 <div className="min-w-0 space-y-2">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-400/90">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#C8102E]">
                     CASE_STUDY
                   </p>
-                  <h1 className="text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
+                  <h1 className="text-3xl font-semibold tracking-tight text-[#1A1814] md:text-4xl">
                     {system.name}
                   </h1>
-                  <p className="max-w-2xl text-sm leading-relaxed text-slate-400 md:text-base">
+                  <p className="max-w-2xl text-sm leading-relaxed text-[#6B645A] md:text-base">
                     {system.shortDescription}
                   </p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
                 <Badge>{system.phase}</Badge>
-                <span className="inline-flex items-center gap-2 rounded-full border border-slate-800/90 bg-slate-900/50 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-slate-400">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#EDE9E3]/90 bg-[#F5F2ED]/50 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-[#6B645A]">
                   <StatusIcon className="h-3.5 w-3.5" aria-hidden />
                   {system.status.replace(/-/g, "_")}
                 </span>
@@ -118,43 +118,43 @@ export default async function FlagshipDetailPage({ params }: Params) {
         </header>
 
         <div className="grid gap-5 md:grid-cols-2">
-          <Card className="border-slate-800/85">
-            <div className="mb-4 flex items-center gap-2 text-blue-400/90">
+          <Card className="border-[#EDE9E3]/85">
+            <div className="mb-4 flex items-center gap-2 text-[#C8102E]">
               <Target className="h-4 w-4" aria-hidden />
               <h2 className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em]">
                 Problem
               </h2>
             </div>
-            <p className="text-sm leading-relaxed text-slate-300">
+            <p className="text-sm leading-relaxed text-[#6B645A]">
               {system.problem}
             </p>
           </Card>
-          <Card className="border-slate-800/85">
-            <div className="mb-4 flex items-center gap-2 text-blue-400/90">
+          <Card className="border-[#EDE9E3]/85">
+            <div className="mb-4 flex items-center gap-2 text-[#C8102E]">
               <Lightbulb className="h-4 w-4" aria-hidden />
               <h2 className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em]">
                 Solution
               </h2>
             </div>
-            <p className="text-sm leading-relaxed text-slate-300">
+            <p className="text-sm leading-relaxed text-[#6B645A]">
               {system.solution}
             </p>
           </Card>
         </div>
 
-        <Card className="border-slate-800/85" variant="glow">
-          <div className="mb-4 flex items-center gap-2 text-blue-400/90">
+        <Card className="border-[#EDE9E3]/85" variant="glow">
+          <div className="mb-4 flex items-center gap-2 text-[#C8102E]">
             <Network className="h-4 w-4" aria-hidden />
             <h2 className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em]">
               Architecture
             </h2>
           </div>
-          <p className="whitespace-pre-line text-sm leading-relaxed text-slate-300">
+          <p className="whitespace-pre-line text-sm leading-relaxed text-[#6B645A]">
             {system.architecture}
           </p>
           {system.architectureDiagramSrc ? (
             <figure className="mt-8 space-y-3">
-              <div className="overflow-hidden rounded-xl border border-slate-800/90 bg-slate-950/80">
+              <div className="overflow-hidden rounded-xl border border-[#EDE9E3]/90 bg-[#FAF8F5]/80">
                 <Image
                   src={system.architectureDiagramSrc}
                   alt={
@@ -169,7 +169,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
                 />
               </div>
               {system.architectureDiagramCaption ? (
-                <figcaption className="text-xs leading-relaxed text-slate-500">
+                <figcaption className="text-xs leading-relaxed text-[#1A1814]0">
                   {system.architectureDiagramCaption}
                 </figcaption>
               ) : null}
@@ -177,8 +177,8 @@ export default async function FlagshipDetailPage({ params }: Params) {
           ) : null}
         </Card>
 
-        <Card className="border-slate-800/85">
-          <div className="mb-4 flex items-center gap-2 text-blue-400/90">
+        <Card className="border-[#EDE9E3]/85">
+          <div className="mb-4 flex items-center gap-2 text-[#C8102E]">
             <Code2 className="h-4 w-4" aria-hidden />
             <h2 className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em]">
               Tech stack
@@ -188,7 +188,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
             {system.stack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-lg border border-slate-800/90 bg-slate-900/50 px-3 py-1.5 font-mono text-[11px] text-slate-200"
+                className="rounded-lg border border-[#EDE9E3]/90 bg-[#F5F2ED]/50 px-3 py-1.5 font-mono text-[11px] text-[#2D2923]"
               >
                 {tech}
               </span>
@@ -196,7 +196,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
           </div>
         </Card>
 
-        <div className="flex flex-wrap gap-4 border-t border-slate-800/80 pt-8">
+        <div className="flex flex-wrap gap-4 border-t border-[#EDE9E3]/80 pt-8">
           {(system.githubUrl || system.liveUrl) && (
             <div className="flex flex-wrap gap-3">
               {system.githubUrl && (
@@ -204,7 +204,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
                   href={system.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-700/80 bg-slate-900/60 px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:border-slate-500 hover:text-slate-100"
+                  className="inline-flex items-center gap-2 rounded-lg border border-[#E4DFD7]/80 bg-[#F5F2ED]/60 px-4 py-2 text-sm font-semibold text-[#2D2923] transition-colors hover:border-[#C4BFB4] hover:text-[#2D2923]"
                 >
                   <Github className="h-4 w-4" aria-hidden />
                   View Source
@@ -215,7 +215,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
                   href={system.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-blue-500/40 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300 transition-colors hover:border-blue-400/60 hover:text-blue-200"
+                  className="inline-flex items-center gap-2 rounded-lg border border-blue-500/40 bg-[#C8102E]/10 px-4 py-2 text-sm font-semibold text-[#C8102E] transition-colors hover:border-blue-400/60 hover:text-[#C8102E]"
                 >
                   <ExternalLink className="h-4 w-4" aria-hidden />
                   Live Demo
@@ -225,7 +225,7 @@ export default async function FlagshipDetailPage({ params }: Params) {
           )}
           <Link
             href="/flagship"
-            className="ml-auto text-sm font-semibold text-blue-400 hover:text-blue-300"
+            className="ml-auto text-sm font-semibold text-[#C8102E] hover:text-[#C8102E]"
           >
             ← All systems
           </Link>

@@ -26,10 +26,10 @@ export default function WhatIBuildTeaser() {
   return (
     <Section className="wib-teaser-section space-y-8">
       <div className="space-y-1">
-        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-400/90">
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#C8102E]">
           02 // What I Build
         </p>
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
+        <h2 className="text-2xl font-semibold tracking-tight text-[#1A1814]">
           Industry reach
         </h2>
       </div>
@@ -48,7 +48,7 @@ export default function WhatIBuildTeaser() {
         })}
       </div>
 
-      <p className="text-sm leading-relaxed text-slate-400">
+      <p className="text-sm leading-relaxed text-[#6B645A]">
         Scalable full-stack systems integrated with AI — across every industry above.
       </p>
 

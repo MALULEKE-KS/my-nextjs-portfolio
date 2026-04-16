@@ -17,11 +17,11 @@ export default function Button(props: ButtonProps) {
 
   const variants: Record<Variant, string> = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-500 focus-visible:ring-blue-500",
+      "bg-[#C8102E] text-white hover:bg-[#C8102E] focus-visible:ring-[#C8102E]-500",
     secondary:
-      "bg-slate-800 text-slate-100 hover:bg-slate-700 focus-visible:ring-slate-500",
+      "bg-[#EDE9E3] text-[#2D2923] hover:bg-[#E4DFD7] focus-visible:ring-slate-500",
     ghost:
-      "bg-transparent text-slate-100 hover:bg-slate-800 focus-visible:ring-slate-500"
+      "bg-transparent text-[#2D2923] hover:bg-[#EDE9E3] focus-visible:ring-slate-500"
   };
 
   const sizes: Record<Size, string> = {

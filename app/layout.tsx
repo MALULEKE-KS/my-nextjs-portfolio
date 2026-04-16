@@ -53,9 +53,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontMono.variable}`}>
-      <body>
+      <body className="bg-[#FAF8F5] text-[#1A1814] antialiased">
         <Providers>
-          <div className="flex min-h-screen flex-col bg-slate-950 text-slate-50">
+          <div className="flex min-h-screen flex-col">
             <Header />
             {children}
             <Footer />

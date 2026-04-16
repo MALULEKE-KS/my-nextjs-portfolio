@@ -64,13 +64,13 @@ export default async function ContactSection() {
       {/* Header */}
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div className="space-y-2">
-          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-blue-400/80">
+          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#C8102E]/80">
             Get In Touch
           </p>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-[#1A1814] md:text-3xl">
             Let&apos;s build something serious
           </h2>
-          <p className="text-sm text-slate-400 max-w-xl">
+          <p className="text-sm text-[#6B645A] max-w-xl">
             Open to software engineering roles and selective platform engagements.
             Pick the channel that fits your style.
           </p>

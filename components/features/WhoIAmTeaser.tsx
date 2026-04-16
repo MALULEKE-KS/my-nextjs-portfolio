@@ -13,21 +13,21 @@ export default async function WhoIAmTeaser() {
   return (
     <Section id="profile" className="wib-teaser-section space-y-8">
       <div className="space-y-1">
-        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-400/90">
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#C8102E]">
           01 // Who I Am
         </p>
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">
+        <h2 className="text-2xl font-semibold tracking-tight text-[#1A1814]">
           {profile.name}
         </h2>
       </div>
 
       <div className="flex flex-col gap-4">
-        <p className="text-sm leading-relaxed text-slate-400">
+        <p className="text-sm leading-relaxed text-[#6B645A]">
           {profile.summary}
         </p>
 
         <div className="flex flex-col gap-3">
-          <p className="text-xs font-medium text-slate-300">
+          <p className="text-xs font-medium text-[#6B645A]">
             {profile.titles.join(" · ")}
           </p>
           <div className="flex flex-wrap items-center gap-3">
@@ -48,7 +48,7 @@ export default async function WhoIAmTeaser() {
       </div>
 
       <div className="flex flex-col gap-3">
-        <p className="text-xs font-medium uppercase tracking-widest text-slate-500">
+        <p className="text-xs font-medium uppercase tracking-widest text-[#1A1814]0">
           Organizations
         </p>
         <div className="flex flex-col gap-3">

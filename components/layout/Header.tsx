@@ -73,7 +73,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-white/5 bg-slate-950/95 backdrop-blur-md sm:hidden">
+        <div className="border-t border-[#1A1814]/5 bg-[#FAF8F5]/95 backdrop-blur-sm sm:hidden">
           <nav className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-1" aria-label="Mobile">
             {nav.items.map((item) => {
               const Icon = navIconMap[item.icon as keyof typeof navIconMap];

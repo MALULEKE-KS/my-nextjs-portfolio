@@ -1,17 +1,17 @@
 {
   "accentColor": "#C8102E",
   "background": {
-    "base": "#080808",
-    "muted": "#080808",
-    "card": "#080808"
+    "base": "#FAF8F5",
+    "muted": "#F0EDE8",
+    "card": "#FAF8F5"
   },
   "text": {
-    "primary": "#F4EFE6",
-    "secondary": "#8A8278"
+    "primary": "#1A1814",
+    "secondary": "#6B645A"
   },
   "home": {
-    "heroHeadline": "Building digital systems that ship and scale.",
-    "heroSubline": "Full-stack engineering + AI integration \u2014 from architecture to production.",
+    "heroHeadline": "Production-grade systems.\nArchitected to ship, built to last.",
+    "heroSubline": "Full-stack engineering, AI integration, and scalable platforms \u2014 from first design sketch to live deployment.",
     "heroBadgeLabel": "Primary surface \u00b7 Engineering portfolio",
     "heroBadgeLucide": "Sparkles",
     "heroKicker": "maluleke-kurhula-portfolio / v1.MVP",
@@ -54,7 +54,7 @@
       "result": "A production-ready backbone with clear architecture, ready for FastAPI/LangChain AI matching."
     },
     "heroScrollHint": "SCROLL \u00b7 EVIDENCE_BELOW",
-    "heroFooterNote": "This portfolio is the primary surface \u2014 a system built to demonstrate how I build.",
+    "heroFooterNote": "Portfolio built with Next.js, TypeScript, and Tailwind CSS.",
     "narrative": {
       "kicker": "02 // THESIS",
       "title": "What this portfolio is about",
@@ -157,8 +157,8 @@
     "backgroundSize": "cover",
     "backgroundPosition": "center",
     "overlay": {
-      "color": "#080808",
-      "opacity": 0.75,
+      "color": "#FAF8F5",
+      "opacity": 0.85,
       "blur": false
     }
   },
@@ -168,8 +168,8 @@
     "backgroundSize": "cover",
     "backgroundPosition": "bottom right",
     "overlay": {
-      "color": "#080808",
-      "opacity": 0.85
+      "color": "#FAF8F5",
+      "opacity": 0.92
     }
   }
 }

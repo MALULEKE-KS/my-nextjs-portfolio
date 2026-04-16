@@ -13,10 +13,10 @@ export default function CurrentFocusSection() {
   return (
     <Section id="current-focus" className="space-y-6">
       <div className="space-y-2">
-        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-400/90">
+        <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#C8102E]">
           {cf.kicker}
         </p>
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
+        <h2 className="text-2xl font-semibold tracking-tight text-[#1A1814] md:text-3xl">
           {cf.title}
         </h2>
       </div>
@@ -24,12 +24,12 @@ export default function CurrentFocusSection() {
         {cf.items.map((item, i) => {
           const Icon = iconMap[i] ?? Code2;
           return (
-            <Card key={item.title} variant="glow" className="border-slate-800/85 p-6">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-blue-500/25 bg-blue-500/10 text-blue-300">
+            <Card key={item.title} variant="glow" className="border-[#EDE9E3]/85 p-6">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-[#C8102E]/25 bg-[#C8102E]/10 text-[#C8102E]">
                 <Icon className="h-5 w-5" aria-hidden />
               </div>
-              <h3 className="mb-2 text-base font-semibold text-slate-100">{item.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-400">{item.description}</p>
+              <h3 className="mb-2 text-base font-semibold text-[#2D2923]">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-[#6B645A]">{item.description}</p>
             </Card>
           );
         })}

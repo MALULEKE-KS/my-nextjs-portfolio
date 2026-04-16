@@ -24,25 +24,25 @@ export default function TechStackPage() {
       />
       <div className="relative z-[1] space-y-12">
         <nav
-          className="flex items-center gap-2 text-xs text-slate-500"
+          className="flex items-center gap-2 text-xs text-[#1A1814]0"
           aria-label="Breadcrumb"
         >
           <Link
             href="/"
-            className="motion-safe-transition hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+            className="motion-safe-transition hover:text-[#6B645A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]-500/60"
           >
             Home
           </Link>
           <span className="text-slate-600" aria-hidden>
             /
           </span>
-          <span className="font-mono text-slate-400">tech-stack</span>
+          <span className="font-mono text-[#6B645A]">tech-stack</span>
         </nav>
 
-        <header className="relative overflow-hidden rounded-2xl border border-slate-800/90 bg-slate-950/50 p-8 shadow-glow-sm backdrop-blur-sm md:p-10">
+        <header className="relative overflow-hidden rounded-2xl border border-[#EDE9E3]/90 bg-[#FAF8F5]/50 p-8 shadow-[0_0_12px_rgba(200,16,46,0.12)] backdrop-blur-sm md:p-10">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-16 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-blue-600/15 blur-3xl"
+            className="pointer-events-none absolute -right-16 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-[#C8102E]/15 blur-3xl"
           />
           <div className="relative flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeader
@@ -51,7 +51,7 @@ export default function TechStackPage() {
               description={copy.description}
               className="max-w-2xl"
             />
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-slate-700/90 bg-slate-900/60 text-blue-400">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-[#E4DFD7]/90 bg-[#F5F2ED]/60 text-[#C8102E]">
               <Code2 className="h-8 w-8" aria-hidden />
             </div>
           </div>

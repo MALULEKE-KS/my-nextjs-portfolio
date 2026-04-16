@@ -13,7 +13,7 @@ export default async function EducationTeaser() {
     <Section className="space-y-6">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-emerald-500/25 bg-emerald-500/10 text-emerald-400">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-emerald-500/25 bg-[#D4A017]/10 text-emerald-400">
           <GraduationCap className="h-6 w-6" aria-hidden />
         </div>
         <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
@@ -21,7 +21,7 @@ export default async function EducationTeaser() {
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-emerald-400/80">
               Education
             </p>
-            <h2 className="text-xl font-semibold tracking-tight text-slate-50">
+            <h2 className="text-xl font-semibold tracking-tight text-[#1A1814]">
               Academic Background
             </h2>
           </div>

@@ -14,9 +14,9 @@ type ApiErrorBody = {
 };
 
 const labelCls =
-  "mb-1.5 block font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500";
+  "mb-1.5 block font-mono text-[10px] uppercase tracking-[0.16em] text-[#1A1814]0";
 const inputCls =
-  "w-full rounded-lg border border-slate-700/90 bg-slate-950/60 px-3 py-2.5 text-sm text-slate-100 placeholder:text-slate-600 focus:border-blue-500/60 focus:outline-none focus:ring-2 focus:ring-blue-500/30 min-h-[44px]";
+  "w-full rounded-lg border border-[#E4DFD7]/90 bg-[#FAF8F5]/60 px-3 py-2.5 text-sm text-[#2D2923] placeholder:text-slate-600 focus:border-blue-500/60 focus:outline-none focus:ring-2 focus:ring-blue-500/30 min-h-[44px]";
 const errCls = "mt-1.5 text-xs text-red-400";
 
 export default function ContactForm() {
@@ -160,7 +160,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="motion-safe-transition inline-flex min-h-[44px] min-w-[160px] items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-glow-sm hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
+        className="motion-safe-transition inline-flex min-h-[44px] min-w-[160px] items-center justify-center gap-2 rounded-lg bg-[#C8102E] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_12px_rgba(200,16,46,0.12)] hover:bg-[#C8102E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? (
           <>

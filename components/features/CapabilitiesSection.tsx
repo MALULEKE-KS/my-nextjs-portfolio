@@ -18,7 +18,7 @@ export default function CapabilitiesSection() {
           description={sections.capabilities.description}
           className="max-w-2xl"
         />
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-700/90 bg-slate-900/60 text-blue-400 md:h-16 md:w-16">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#E4DFD7]/90 bg-[#F5F2ED]/60 text-[#C8102E] md:h-16 md:w-16">
           <Layers className="h-7 w-7 md:h-8 md:w-8" aria-hidden />
         </div>
       </div>
@@ -26,16 +26,16 @@ export default function CapabilitiesSection() {
         {cap.groups.map((g) => (
           <Card
             key={g.id}
-            className="motion-safe-hover-lift border-slate-800/85 p-5"
+            className="motion-safe-hover-lift border-[#EDE9E3]/85 p-5"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#1A1814]0">
               {g.title}
             </p>
             <ul className="mt-3 space-y-2">
               {g.items.map((item) => (
                 <li
                   key={item}
-                  className="text-sm leading-snug text-slate-300"
+                  className="text-sm leading-snug text-[#6B645A]"
                 >
                   {item}
                 </li>
@@ -47,7 +47,7 @@ export default function CapabilitiesSection() {
       <div className="flex justify-start">
         <Link
           href={cap.stackHref}
-          className="motion-safe-transition inline-flex min-h-[44px] items-center rounded-lg border border-slate-600/90 bg-slate-950/40 px-5 py-2.5 text-sm font-semibold text-slate-100 backdrop-blur-sm hover:border-slate-500 hover:bg-slate-900/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          className="motion-safe-transition inline-flex min-h-[44px] items-center rounded-lg border border-[#D4CFC4]/90 bg-[#FAF8F5]/40 px-5 py-2.5 text-sm font-semibold text-[#2D2923] backdrop-blur-sm hover:border-[#C4BFB4] hover:bg-[#F5F2ED]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
         >
           {cap.stackCtaLabel}
         </Link>

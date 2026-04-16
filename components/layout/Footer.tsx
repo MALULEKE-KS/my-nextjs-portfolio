@@ -12,17 +12,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-16 border-t border-slate-800/80 bg-slate-950/80">
+    <footer className="mt-16 border-t border-[#EDE9E3]/80 bg-[#FAF8F5]/80">
       <div className="mx-auto max-w-6xl px-4 py-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
-            <p className="font-mono text-sm font-semibold text-slate-200">
+            <p className="font-mono text-sm font-semibold text-[#2D2923]">
               {profile.name}
             </p>
-            <p className="font-mono text-xs text-slate-500">
+            <p className="font-mono text-xs text-[#1A1814]0">
               {profile.education?.institution} · {profile.education?.degree}
             </p>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-[#1A1814]0">
               Building practical digital systems that solve real-world challenges.
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                     href={link.url}
                     target={link.url.startsWith("http") ? "_blank" : undefined}
                     rel={link.url.startsWith("http") ? "noreferrer" : undefined}
-                    className="inline-flex items-center gap-1.5 text-xs text-slate-400 transition-colors hover:text-slate-200"
+                    className="inline-flex items-center gap-1.5 text-xs text-[#6B645A] transition-colors hover:text-[#2D2923]"
                   >
                     {Icon ? <Icon className="h-3.5 w-3.5" aria-hidden /> : null}
                     <span>{link.type.charAt(0).toUpperCase() + link.type.slice(1)}</span>
@@ -48,26 +48,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-slate-800/80 pt-6">
-          <p className="text-xs text-slate-500">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-[#EDE9E3]/80 pt-6">
+          <p className="text-xs text-[#1A1814]0">
             © 2026 {profile.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link
               href="/methodology"
-              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+              className="text-xs text-[#1A1814]0 transition-colors hover:text-[#6B645A]"
             >
               Philosophy
             </Link>
             <Link
               href="/flagship"
-              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+              className="text-xs text-[#1A1814]0 transition-colors hover:text-[#6B645A]"
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+              className="text-xs text-[#1A1814]0 transition-colors hover:text-[#6B645A]"
             >
               Contact
             </Link>

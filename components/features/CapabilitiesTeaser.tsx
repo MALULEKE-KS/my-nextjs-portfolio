@@ -12,21 +12,21 @@ export default function CapabilitiesTeaser() {
     <Section className="space-y-8">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-500/25 bg-blue-500/10 text-blue-300">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#C8102E]/25 bg-[#C8102E]/10 text-[#C8102E]">
           <Layers className="h-6 w-6" aria-hidden />
         </div>
         <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-blue-400/90">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#C8102E]">
               {sections.capabilities.kicker}
             </p>
-            <h2 className="text-xl font-semibold tracking-tight text-slate-50">
+            <h2 className="text-xl font-semibold tracking-tight text-[#1A1814]">
               {sections.capabilities.title}
             </h2>
           </div>
           <Link
             href="/capabilities"
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 hover:text-blue-300"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-[#C8102E] hover:text-[#C8102E]"
           >
             Full stack
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />

@@ -20,22 +20,22 @@ export default function ContactPage() {
       />
       <div className="relative z-[1] space-y-10">
         <nav
-          className="flex items-center gap-2 text-xs text-slate-500"
+          className="flex items-center gap-2 text-xs text-[#1A1814]0"
           aria-label="Breadcrumb"
         >
           <Link
             href="/"
-            className="motion-safe-transition hover:text-slate-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+            className="motion-safe-transition hover:text-[#6B645A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]-500/60"
           >
             Home
           </Link>
           <span className="text-slate-600" aria-hidden>
             /
           </span>
-          <span className="font-mono text-slate-400">contact</span>
+          <span className="font-mono text-[#6B645A]">contact</span>
         </nav>
 
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/25 bg-blue-500/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-blue-300/95">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#C8102E]/25 bg-[#C8102E]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-[#C8102E]">
           <MessageCircle className="h-3 w-3" aria-hidden />
           Channels
         </div>

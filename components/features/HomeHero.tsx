@@ -17,7 +17,7 @@ async function HeroContent() {
           {profile.openToWork && (
             <div className="hero-open-to-work">
               <span className="hero-open-dot" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300/95">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#D4A017]">
                 {profile.openToWorkLabel}
               </span>
             </div>
@@ -25,14 +25,14 @@ async function HeroContent() {
           <h1 className="hero-name-text">
             {profile.name}
           </h1>
-          <p className="font-mono text-sm font-medium uppercase tracking-wider text-blue-400/90 md:text-base">
+          <p className="font-mono text-sm font-medium uppercase tracking-wider text-[#C8102E] md:text-base">
             {profile.titles.join(" · ")}
           </p>
           <p className="hero-tagline-text">
             {profile.tagline}
           </p>
           {profile.location && (
-            <p className="font-mono text-xs text-slate-500 md:text-sm">
+            <p className="font-mono text-xs text-[#1A1814]0 md:text-sm">
               {profile.location}
             </p>
           )}
@@ -82,7 +82,7 @@ async function HeroContent() {
             <div className="hero-portrait-ring" aria-hidden="true" />
             <div className="hero-portrait-glow" aria-hidden="true" />
             <div className="hero-portrait-ambient" aria-hidden="true" />
-            <figure className="hero-portrait relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-slate-700/85 bg-slate-900 shadow-glow-sm ring-1 ring-blue-500/15 motion-safe-hover-lift aspect-[4/5] md:mx-0 md:max-w-[280px] lg:max-w-[300px]">
+            <figure className="hero-portrait relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-[#E4DFD7]/85 bg-[#F5F2ED] shadow-[0_0_12px_rgba(200,16,46,0.12)] ring-1 ring-blue-500/15 motion-safe-hover-lift aspect-[4/5] md:mx-0 md:max-w-[280px] lg:max-w-[300px]">
               <Image
                 src={profile.portraitSrc}
                 alt={profile.portraitAlt ?? profile.name}

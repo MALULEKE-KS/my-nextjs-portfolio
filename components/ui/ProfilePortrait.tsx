@@ -17,7 +17,7 @@ export default function ProfilePortrait({
   return (
     <figure
       className={cn(
-        "relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-slate-700/85 bg-slate-900 shadow-glow-sm ring-1 ring-blue-500/15 motion-safe-hover-lift md:mx-0",
+        "relative mx-auto w-full max-w-[280px] shrink-0 overflow-hidden rounded-2xl border border-[#E4DFD7]/85 bg-[#F5F2ED] shadow-[0_0_12px_rgba(200,16,46,0.12)] ring-1 ring-blue-500/15 motion-safe-hover-lift md:mx-0",
         "aspect-[4/5]",
         className
       )}

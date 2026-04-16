@@ -21,17 +21,17 @@ async function TechStackContent() {
         return (
           <Card
             key={category.id}
-            className="border-slate-800/85 transition-colors hover:border-slate-700/90"
+            className="border-[#EDE9E3]/85 transition-colors hover:border-[#E4DFD7]/90"
           >
             <div className="mb-5 flex items-start gap-3">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-500/25 bg-blue-500/10 text-blue-300">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#C8102E]/25 bg-[#C8102E]/10 text-[#C8102E]">
                 <CategoryIcon className="h-5 w-5" aria-hidden />
               </div>
               <div>
-                <h3 className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-blue-400/85">
+                <h3 className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C8102E]/85">
                   {category.name}
                 </h3>
-                <p className="mt-1 text-[11px] text-slate-500">
+                <p className="mt-1 text-[11px] text-[#1A1814]0">
                   Layer · {category.id.replace(/-/g, "_")}
                 </p>
               </div>
@@ -40,7 +40,7 @@ async function TechStackContent() {
               {category.items.map((item) => (
                 <span
                   key={item.name}
-                  className="rounded-md border border-slate-800/90 bg-slate-900/40 px-2.5 py-1 font-mono text-[11px] text-slate-300 motion-safe:transition motion-safe:duration-180 motion-safe:hover:border-blue-500/35 motion-safe:hover:text-slate-100"
+                  className="rounded-md border border-[#EDE9E3]/90 bg-[#F5F2ED]/40 px-2.5 py-1 font-mono text-[11px] text-[#6B645A] motion-safe:transition motion-safe:duration-180 motion-safe:hover:border-[#C8102E]/35 motion-safe:hover:text-[#2D2923]"
                 >
                   {item.name}
                 </span>

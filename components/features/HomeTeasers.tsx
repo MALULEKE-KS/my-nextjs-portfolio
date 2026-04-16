@@ -19,7 +19,7 @@ export default function HomeTeasers() {
           description={teasersSection.description}
           className="max-w-2xl"
         />
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-700/90 bg-slate-900/60 text-blue-400 md:h-16 md:w-16">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#E4DFD7]/90 bg-[#F5F2ED]/60 text-[#C8102E] md:h-16 md:w-16">
           <LayoutTemplate className="h-7 w-7 md:h-8 md:w-8" aria-hidden />
         </div>
       </div>
@@ -30,33 +30,33 @@ export default function HomeTeasers() {
             <Link key={t.href} href={t.href} className="group block h-full">
               <Card
                 variant="glow"
-                className="relative flex h-full flex-col justify-between overflow-hidden p-6 transition-colors hover:border-blue-500/35"
+                className="relative flex h-full flex-col justify-between overflow-hidden p-6 transition-colors hover:border-[#C8102E]/35"
               >
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-blue-500/10 opacity-0 blur-2xl motion-safe:transition motion-safe:duration-300 group-hover:opacity-100"
+                  className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[#C8102E]/10 opacity-0 blur-2xl motion-safe:transition motion-safe:duration-300 group-hover:opacity-100"
                 />
                 <div className="relative space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-blue-500/25 bg-blue-500/10 text-blue-300">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#C8102E]/25 bg-[#C8102E]/10 text-[#C8102E]">
                       <TeaserIcon className="h-5 w-5" aria-hidden />
                     </div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-blue-400/85">
+                    <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#C8102E]/85">
                       {t.kicker}
                     </p>
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-50">
+                  <h3 className="text-lg font-semibold text-[#1A1814]">
                     {t.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-400">
+                  <p className="text-sm leading-relaxed text-[#6B645A]">
                     {t.body}
                   </p>
                 </div>
-                <div className="relative mt-8 flex items-center justify-between gap-3 border-t border-slate-800/80 pt-5">
-                  <span className="text-sm font-semibold text-blue-300/95">
+                <div className="relative mt-8 flex items-center justify-between gap-3 border-t border-[#EDE9E3]/80 pt-5">
+                  <span className="text-sm font-semibold text-[#C8102E]">
                     {t.ctaLabel}
                   </span>
-                  <ArrowUpRight className="h-5 w-5 text-slate-500 motion-safe:transition motion-safe:duration-180 group-hover:text-blue-400" />
+                  <ArrowUpRight className="h-5 w-5 text-[#1A1814]0 motion-safe:transition motion-safe:duration-180 group-hover:text-[#C8102E]" />
                 </div>
               </Card>
             </Link>

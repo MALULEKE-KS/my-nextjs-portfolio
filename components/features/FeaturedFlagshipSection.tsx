@@ -13,10 +13,10 @@ export default async function FeaturedFlagshipSection() {
       {/* Header */}
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div className="space-y-2">
-          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-blue-400/80">
+          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#C8102E]/80">
             Featured Case Study
           </p>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-[#1A1814] md:text-3xl">
             Flagship system in focus
           </h2>
         </div>
@@ -90,7 +90,7 @@ export default async function FeaturedFlagshipSection() {
             <div className="ffm-card-pillar">
               <div className="ffm-pillar-accent solution" aria-hidden />
               <div className="ffm-pillar-label">
-                <Lightbulb className="h-4 w-4 shrink-0 text-blue-400" aria-hidden />
+                <Lightbulb className="h-4 w-4 shrink-0 text-[#C8102E]" aria-hidden />
                 <span className="ffm-pillar-label-text solution">Solution</span>
               </div>
               <p className="ffm-pillar-body">
